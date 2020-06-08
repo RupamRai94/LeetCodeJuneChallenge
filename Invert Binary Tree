@@ -1,0 +1,13 @@
+def invert_tree(root)
+    unless root
+        return nil
+    end
+    
+    left = invert_tree(root.left)
+    right = invert_tree(root.right)
+    
+    root.right = left
+    root.left = right
+    
+    return root 
+end
