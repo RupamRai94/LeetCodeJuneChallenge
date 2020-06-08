@@ -1,0 +1,13 @@
+def reverse_string(s)
+    temp = 0
+    s.each_with_index do |val,index|
+      if (s.length / 2).to_i > index
+        temp = s[index]
+        s[index] = s[s.length - index - 1]
+        s[s.length - index - 1] = temp
+      else
+        break
+      end
+    end
+    s
+end
