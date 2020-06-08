@@ -1,0 +1,9 @@
+def two_city_sched_cost(costs)
+   sorted_arr = costs.sort_by {|cost| cost[1] - cost[0]}
+   half = costs.length / 2
+   total = 0
+   sorted_arr.each_with_index do |cost, index|
+       total += index < half ? cost[1] : cost[0]
+   end
+    total
+end
