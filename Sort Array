@@ -1,0 +1,32 @@
+# Input: [2,0,2,1,1,0]
+# Output: [0,0,1,1,2,2]
+def sort_colors(nums)
+    c0 = c1 = c2 = i = 0
+    len = nums.length
+    
+    nums.each { |n|
+    if(n==0)
+      c0 += 1
+    elsif(n==1)
+      c1 += 1
+    else
+      c2 += 1
+    end
+    }
+    
+    c0.times {
+      nums[i] = 0
+      i += 1
+    }
+    
+    c1.times {
+      nums[i] = 1
+      i += 1
+    }
+    
+    c2.times {
+      nums[i] = 2
+      i += 1
+    }
+  nums
+end
