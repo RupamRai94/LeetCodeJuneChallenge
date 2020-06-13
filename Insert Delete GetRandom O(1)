@@ -1,0 +1,19 @@
+class RandomizedSet
+    
+    def initialize()
+        @array = Array.new
+    end
+
+    def insert(val)
+        @array.include?(val) ? false : @array.push(val) ? true : false
+    end
+
+    def remove(val)
+        @array.delete(val) ? true : false
+    end
+
+    def get_random()
+        @array.sample
+    end
+
+end
